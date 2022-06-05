@@ -1,0 +1,59 @@
+.skills {
+    h1 {
+        font-size: 40px;
+        padding-top: 1em;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    h2{
+        padding-top: 0.8em;
+        color: $primary;
+        // text-shadow: 0 3px 10px rgba(0,0,0,0.16), 0 3px 10px rgba(0,0,0,0.23);
+    }
+    .cards-container {
+        padding-top: 5em;
+        background-color: $primary;
+        .card {
+            height: 370px;
+        }
+    }
+
+    .skill-list1 {
+        padding-top: 1em;
+        padding-left: 9em;
+    }
+    .skill-list2 {
+        padding-top: 1em;
+        padding-left: 7em;
+    }
+
+    i {
+        padding-right: 8px;
+    }
+    p {
+        display: flex;
+        font-size: 25px;
+        text-shadow: 0 1px 6px rgba(0,0,0,0.16), 0 1px 6px rgba(0,0,0,0.23);
+    }
+
+    .resume-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        p {
+            font-weight: bold;
+            padding-top: 3em;
+            padding-bottom: 0.5em;
+        }
+        .resume {
+            background-color: $secondary;
+            a {
+                color: $primary;
+                font-weight: bold;
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

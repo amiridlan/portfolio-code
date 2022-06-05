@@ -1,0 +1,116 @@
+@import "./variables";
+@import "./mixins";
+@import "./scrollbar";
+@import "./sidebar";
+@import "./home";
+@import "./portfolio";
+@import "./skills";
+@import "./contact";
+
+* {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    @include font;
+    overflow-x: hidden
+}
+
+body {
+    background-color: $primary;
+    display: flex;
+	min-height: 100vh;
+    width: 90vw;
+    float: right;
+}
+
+section {
+    height: 100vh;
+    width: 90vw;
+    display: block;
+    text-align: center;
+    background-color: $primary;
+    color: $secondary;
+    
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+    background-color: $accent2;
+    color: $accent;
+    
+    .card {
+        background: $secondary;
+        position: relative;
+        margin: 15px;
+        width: 400px;
+        height: 430px;
+        border-radius: 22px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+  }
+
+// MEDIA QUERIES
+@media (max-width: 1620px) {
+    body {
+        width: 100vw;
+    }
+    section{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 0;
+        width: 100vw;
+    }
+
+	.sidebar {
+        position: fixed;
+        max-width: 17rem;
+        z-index: 1; 
+        left: 0;
+        display: flex;
+        justify-content: start;
+		transform:translateX(-300px);
+        transition: transform 0.3s ease-in;
+        &.side-active {
+            transform: translateX(0);
+            .burger {
+                padding-left: 100px;
+            }
+        }
+        .name {
+            padding-top: 20em;
+        }
+	}
+	
+    .portfolio {
+        height: 150vh;
+    }
+
+    .burger {
+        float: right;
+        z-index: 2;
+        background-color: $secondary;
+        border-radius: 5px;
+        position: fixed;
+        margin-top: 35px;
+        margin-left: 35px;
+        cursor: pointer;
+        div{
+            width: 25px;
+            height: 3px;
+            background-color: $primary;
+            margin: 6px;
+        }
+    }
+
+    hr {
+        width: 100%;
+        border-style: none;
+    }
+}
+// END OF MEDIA QUERY

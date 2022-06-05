@@ -1,0 +1,70 @@
+.portfolio {
+  background-color: $accent2;
+  color: $accent;
+  padding-top: 3em;
+  height: 145vh;
+
+    h1 {
+      font-size: 40px;
+      padding-top: 0.1em;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    h2{
+      color: $primary;
+      padding-top: 0.1em;
+    }
+
+    p {
+      color: $primary;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+      &.lang {
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        font-weight: bold;
+      }
+    }
+
+    .cards-container {
+      padding-left: 9px;
+  }
+}
+
+img {
+  width: 400px;
+  height: 250px;
+  margin-bottom: 5px;
+}
+
+button {
+  background-color: $primary;
+  border: none;
+  border-radius: 4px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.2em;
+  padding-bottom: 0.3em;
+  
+  a{
+    text-decoration: none;
+    color: $accent;
+    font-size: 18px;
+    &:hover {
+      color: $accent2;
+    }
+  }
+}
+
+.preview-site{
+  position: absolute;
+  bottom: 0.5em;
+  left: 8.5em;
+}
+
+.code{
+  position: absolute;
+  bottom: 0.5em;
+  right: 8.5em;
+}
+

@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    h1 {
+        font-size: 40px;
+        padding-bottom: 0.5em;
+        text-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow:0 5px 10px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+}

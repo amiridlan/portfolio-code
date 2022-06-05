@@ -1,0 +1,59 @@
+
+// MOBILE SIDEBAR
+.burger-toggle {
+	display: none;
+	position: fixed;
+	top: 2rem;
+	left: 2rem;
+	width: 60px;
+	height: 60px;
+	border-radius: 99px;
+	background-color: $secondary;
+	cursor: pointer;
+}
+
+
+
+// SIDEBAR
+.sidebar {
+	flex: 1 1 0;
+  position: fixed;
+  height: 100%;
+	// width: 17rem;
+  padding-left: 4.4em;
+  padding-right: 4.4em;
+	top: 0;
+  left: 0;
+	background-color: $secondary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  .name {
+    padding-top: 10em;
+  }
+
+    h3 {
+      color: $primary;
+      font-size: 1.5em;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    .nav-links{
+      .nav-item {
+        display: block;
+        padding: 0.5em;
+        color: $accent;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.2s linear;
+        text-shadow:0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+    
+}
