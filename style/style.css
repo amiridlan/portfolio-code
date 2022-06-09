@@ -428,6 +428,39 @@ section {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+@media (max-width: 441px) {
+  .home h1 {
+    font-size: 30px;
+  }
+  .home p {
+    font-size: 14px;
+  }
+  .portfolio h1 {
+    font-size: 30px;
+  }
+  .portfolio .cards-container {
+    width: 25em;
+  }
+  .skills h1 {
+    font-size: 30px;
+  }
+  .skills .cards-container {
+    width: 25em;
+    padding-top: 0;
+  }
+  .contact h1 {
+    font-size: 30px;
+  }
+  .contact .cards-container {
+    width: 25em;
+    font-size: 17px;
+    padding-top: 0;
+  }
+  .contact i {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 1620px) {
   body {
     width: 100vw;
@@ -475,7 +508,13 @@ section {
     padding-top: 20em;
   }
   .portfolio {
-    height: 150vh;
+    height: 200vh;
+  }
+  .portfolio .cards-container {
+    padding-left: 0;
+  }
+  .skills {
+    height: 125vh;
   }
   .burger {
     float: right;

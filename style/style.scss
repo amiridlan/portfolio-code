@@ -55,6 +55,52 @@ section {
   }
 
 // MEDIA QUERIES
+@media (max-width: 441px) {
+    
+    .home {
+        h1 {
+            font-size: 30px;
+        }
+        p {
+        font-size: 14px;
+    }
+}
+
+    .portfolio {
+    h1 {
+        font-size: 30px;
+    }
+    .cards-container {
+    width: 25em;
+    }
+}
+
+    .skills {
+    h1 {
+        font-size: 30px;
+    }
+    .cards-container {
+        width: 25em;
+        padding-top: 0;
+    }
+}
+
+    .contact {
+    h1 {
+        font-size: 30px;
+    }
+    .cards-container {
+        width: 25em;
+        font-size: 17px;
+        padding-top: 0;
+    }
+
+    i {
+        padding-left: 0;
+        }
+}
+}
+
 @media (max-width: 1620px) {
     body {
         width: 100vw;
@@ -88,7 +134,14 @@ section {
 	}
 	
     .portfolio {
-        height: 150vh;
+        height: 200vh;
+        .cards-container {
+            padding-left: 0;
+        }
+    }
+
+    .skills {
+        height: 125vh;
     }
 
     .burger {
