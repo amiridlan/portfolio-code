@@ -111,6 +111,7 @@ html::-webkit-scrollbar-track {
 }
 
 .portfolio h1 {
+  overflow: hidden;
   font-size: 40px;
   padding-top: 0.1em;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -176,6 +177,7 @@ button a:hover {
 }
 
 .skills h1 {
+  overflow: hidden;
   font-size: 40px;
   padding-top: 1em;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -187,7 +189,7 @@ button a:hover {
 }
 
 .skills .cards-container {
-  padding-top: 5em;
+  padding-top: 1em;
   background-color: #05386b;
 }
 
@@ -435,8 +437,12 @@ section {
   .home p {
     font-size: 14px;
   }
+  .portfolio {
+    height: 500vh;
+  }
   .portfolio h1 {
     font-size: 30px;
+    padding-top: 0;
   }
   .portfolio .cards-container {
     width: 25em;
@@ -458,6 +464,9 @@ section {
   }
   .contact i {
     padding-left: 0;
+  }
+  .contact .resume {
+    overflow: hidden;
   }
 }
 
@@ -515,6 +524,10 @@ section {
   }
   .skills {
     height: 125vh;
+  }
+  .skills .resume-container p {
+    padding-top: 0.5em;
+    padding-bottom: 0.2em;
   }
   .burger {
     float: right;

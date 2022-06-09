@@ -67,15 +67,19 @@ section {
 }
 
     .portfolio {
+        height: 500vh;
     h1 {
         font-size: 30px;
+        padding-top: 0;
     }
     .cards-container {
-    width: 25em;
+        width: 25em;
+        
     }
 }
 
     .skills {
+        
     h1 {
         font-size: 30px;
     }
@@ -98,6 +102,10 @@ section {
     i {
         padding-left: 0;
         }
+
+    .resume {
+        overflow: hidden;
+    }
 }
 }
 
@@ -142,6 +150,12 @@ section {
 
     .skills {
         height: 125vh;
+        .resume-container {
+            p {
+                padding-top: 0.5em;
+                padding-bottom: 0.2em;
+            }
+        }
     }
 
     .burger {
