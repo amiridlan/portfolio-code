@@ -1,0 +1,390 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdf4e3;
+            color: #1a3b5d;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 100%;
+            background-color: #fdf4e3;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #1a3b5d;
+            font-weight: 400;
+        }
+        .sidebar a.active {
+            font-weight: 700;
+        }
+        .content {
+            margin-left: 170px;
+            width: calc(100% - 170px);
+        }
+        .section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        .section h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #1a3b5d;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .skills, .projects, .contact {
+            background-color: #1a3b5d;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .skills .skill-item, .contact .contact-item {
+            display: inline-block;
+            width: 45%;
+            margin: 10px 2.5%;
+            text-align: left;
+        }
+        
+        .projects {
+            width: 80%;
+        }
+        .projects .project-item {
+            display: inline-block;
+            width: 20%;
+            margin: 10px 1.66%;
+            text-align: left;
+        }
+        .projects .project-item img {
+            width: 100%;
+            border-radius: 10px 10px 10px 10px;
+        }
+        .projects .project-item .project-info {
+            padding: 10px;
+        }
+        .projects .project-item .project-info h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .projects .project-item .project-info p {
+            margin: 5px 0;
+        }
+        .projects .project-item .project-info .button {
+            margin: 5px 0;
+            display: inline-block;
+        }
+        .contact .contact-item {
+            background-color: #1a3b5d;
+            color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .sidebar a {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+            .skills .skill-item, .contact .contact-item, .projects .project-item {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1a3b5d;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="sidebar">
+   <a class="active" href="#home">
+    Home
+   </a>
+   <a href="#skills">
+    Skills
+   </a>
+   <a href="#projects">
+    Projects
+   </a>
+   <a href="#contact">
+    Contact
+   </a>
+  </div>
+  <div class="content">
+   <div class="section container" id="home">
+    <h1>
+     Amir Idlan
+     <br/>
+     Web Developer
+    </h1>
+    <p>
+     I am a fresh graduate of Bachelor's in Computer Science. I am currently looking for employment whether in Web Development, UI/UX or any jobs that are related to computer science.
+    </p>
+    <a class="button" href="#">
+     View Resume
+    </a>
+   </div>
+   <div class="section container" id="skills">
+    <h1>
+     Skills
+    </h1>
+    <div class="skills">
+     <div class="skill-item">
+      <i class="fab fa-js-square">
+      </i>
+      Javascript
+     </div>
+     <div class="skill-item">
+      <i class="fab fa-laravel">
+      </i>
+      Laravel
+     </div>
+     <div class="skill-item">
+      <i class="fab fa-js-square">
+      </i>
+      PHP
+     </div>
+     <div class="skill-item">
+      <i class="fab fa-css3-alt">
+      </i>
+      CSS
+     </div>
+     <div class="skill-item">
+      <i class="fab fa-html5">
+      </i>
+      HTML
+     </div>
+     <div class="skill-item">
+      <i class="fab fa-bootstrap">
+      </i>
+      Bootstrap
+     </div>
+    </div>
+   </div>
+   <div class="section container" id="projects">
+    <h1>
+     Projects
+    </h1>
+    <div class="projects">
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+     <div class="project-item">
+      <img alt="Project image" height="200" src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg" width="300"/>
+      <div class="project-info">
+       <h3>
+        Project Title
+       </h3>
+       <p>
+        Short description with language used.
+       </p>
+       <a class="button" href="#">
+        Details
+       </a>
+       <a class="button" href="#">
+        Code
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="section container" id="contact">
+    <h1>
+     Contact
+    </h1>
+    <div class="contact">
+     <div class="contact-item">
+      <i class="fas fa-phone">
+      </i>
+      <br/>
+      Mobile Phone
+      <br/>
+      011-1291 0313
+     </div>
+     <div class="contact-item">
+      <i class="fas fa-envelope">
+      </i>
+      <br/>
+      Email
+      <br/>
+      amiridlan6@gmail.com
+     </div>
+     <div class="contact-item">
+      <i class="fab fa-github">
+      </i>
+      <br/>
+      Github
+      <br/>
+      github.com/amiridlan
+     </div>
+     <div class="contact-item">
+      <i class="fab fa-instagram">
+      </i>
+      <br/>
+      Instagram
+      <br/>
+      _amirmir6
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="scroll-to-top" id="scrollToTopBtn">
+   <i class="fas fa-arrow-up">
+   </i>
+  </div>
+  <script>
+   // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+  </script>
+ </body>
+</html>
