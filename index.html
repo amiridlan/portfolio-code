@@ -12,18 +12,24 @@
       rel="stylesheet"
     />
     <style>
-      body {
+      html, body {
         font-family: "Poppins", sans-serif;
         margin: 0;
         padding: 0;
         background-color: #fdf4e3;
         color: #1a3b5d;
+        height: 100%;
+        
       }
       .container {
+        height: 100vh;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
       }
       .sidebar {
         position: fixed;
@@ -34,6 +40,7 @@
         background-color: #fdf4e3;
         padding: 20px;
         box-sizing: border-box;
+        z-index: 900;
       }
       .sidebar a {
         display: block;
@@ -46,11 +53,22 @@
         font-weight: 700;
       }
       .content {
+        height: 100vh;
+        width: 100%;
+        overflow-y: scroll; /* Enable vertical scrolling */
+        overflow-x: hidden;
         margin-left: 170px;
         width: calc(100% - 170px);
       }
       .section {
-        margin: 40px 0;
+        /* margin: 40px 0; */
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        scroll-snap-align: start; 
         text-align: center;
       }
       .section h1 {
@@ -126,6 +144,9 @@
           width: 100%;
           height: auto;
           position: relative;
+          top: 0;
+          left: 0;
+          padding: 10px;
         }
         .sidebar a {
           display: inline-block;
@@ -157,7 +178,7 @@
   </head>
   <body>
     <div class="sidebar">
-      <a class="active" href="#home"> Home </a>
+      <a href="#home"> Home </a>
       <a href="#skills"> Skills </a>
       <a href="#projects"> Projects </a>
       <a href="#contact"> Contact </a>
@@ -170,9 +191,9 @@
           Web Developer
         </h1>
         <p>
-          I am a fresh graduate of Bachelor's in Computer Science. I am
+          I am a fresh graduate of Bachelor's in Computer Science. <br> I am
           currently looking for employment whether in Web Development, UI/UX or
-          any jobs that are related to computer science.
+          any jobs that are related.
         </p>
         <a class="button" href="resume.html"> View Resume </a>
       </div>
@@ -208,34 +229,6 @@
       <div class="section container" id="projects">
         <h1>Projects</h1>
         <div class="projects">
-          <div class="project-item">
-            <img
-              alt="Project image"
-              height="200"
-              src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg"
-              width="300"
-            />
-            <div class="project-info">
-              <h3>Project Title</h3>
-              <p>Short description with language used.</p>
-              <a class="button" href="#"> Details </a>
-              <a class="button" href="#"> Code </a>
-            </div>
-          </div>
-          <div class="project-item">
-            <img
-              alt="Project image"
-              height="200"
-              src="https://storage.googleapis.com/a1aa/image/xkeBLz9N8ftpdUU48VH4qDTywSLfscaVbV8ejTmFClGe2dbfE.jpg"
-              width="300"
-            />
-            <div class="project-info">
-              <h3>Project Title</h3>
-              <p>Short description with language used.</p>
-              <a class="button" href="#"> Details </a>
-              <a class="button" href="#"> Code </a>
-            </div>
-          </div>
           <div class="project-item">
             <img
               alt="Project image"
@@ -356,6 +349,57 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
       };
+
+      // ACTIVE BUTTONS
+
+      document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll(".section");
+  const sidebarLinks = document.querySelectorAll(".sidebar a");
+
+  // Function to update the active class
+  function updateActiveLink(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Remove active class from all links
+        sidebarLinks.forEach((link) => link.classList.remove("active"));
+
+        // Add active class to the corresponding link
+        const id = entry.target.getAttribute("id");
+        const correspondingLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+        if (correspondingLink) {
+          correspondingLink.classList.add("active");
+        }
+      }
+    });
+  }
+
+  // Set up Intersection Observer
+  const observerOptions = {
+    root: null, // Use the viewport as the root
+    rootMargin: "0px",
+    threshold: 0.5, // Trigger when 50% of the section is visible
+  };
+
+  const observer = new IntersectionObserver(updateActiveLink, observerOptions);
+
+  // Observe each section
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Smooth scroll to section when sidebar link is clicked
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
     </script>
   </body>
 </html>
